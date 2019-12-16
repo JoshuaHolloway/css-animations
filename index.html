@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .circle {
+        width: 200px;
+        height: 200px;
+        background: #0099ff;
+        border-radius: 50%;
+      }
+      body {
+        background: #fff;
+        padding: 50px;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translate3d(0px, 0px, 0px);
+        }
+        50% {
+          transform: translate3d(800px, 500px, 0px);
+          opacity: 0.1;
+        }
+        100% {
+          transform: translate3d(0px, 0px, 0px);
+        }
+      }
+
+      #myCircle {
+        animation: slide 2s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myCircle" class="circle"></div>
+    <script src="prefixfree.js"></script>
+  </body>
+</html>
