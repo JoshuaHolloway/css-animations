@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      div {
-        background: #ffd800;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-      }
 
-      div:hover {
-        background: #808080;
-        transition: background-color 0.3s ease-in;
-      }
-    </style>
-  </head>
-  <body>
-    <div></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+
+  <!-- CSS Transitions need 3-things:
+  1. The CSS property to apply the transition to
+  2. How long the transition will last
+  3. What kind of a timing function (aka easing function) to use -->
+
+  <!-- Transition Property -->
+  <!-- transition: transition-property  transition-duration  transition-timing-function -->
+  <!-- transition: transform 0.5s ease-in; -->
+
+  <!-- transition-property is the document-object property we listen for the changes on -->
+  <!-- transition-timing-function == transition-easing-function -->
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      background: #ffd800;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+
+    div:hover {
+      background: #808080;
+      transition: background-color 0.3s ease-in;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
 </html>

@@ -1,46 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <style>
-      body {
-        background: #fff;
-        margin: 30px;
-        margin-top: 10px;
-      }
 
-      #box {
-        width: 350px;
-        height: 350px;
-        border: 5px black solid;
-        overflow: hidden;
-        background: #f2f2f2;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
 
-      #box img {
-        transform: translate3d(0, -350px, 0);
-        /* transition: all 0.5s ease-in; */
-        /* transition: all 0.5s cubic-bezier(0.31, 1.38, 0.55, -0.27); */
-        transition-property: all;
-        transition-duration: 0.5s;
-        transition-timing-function: cubic-bezier(0.31, 1.38, 0.55, -0.27);
-        transition-delay: 0.1s;
-      }
 
-      #box img:hover {
-        transform: translate3d(0, 0px, 0);
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <div>
-      <div id="box">
-        <img src="html5_slider.png" alt="HTML-5 slider" />
-      </div>
+  <!-- CSS Transitions need 3-things:
+  1. The CSS property to apply the transition to
+  2. How long the transition will last
+  3. What kind of a timing function (aka easing function) to use -->
+
+  <!-- Transition Property -->
+  <!-- transition: transition-property  transition-duration  transition-timing-function -->
+  <!-- transition: transform 0.5s ease-in; -->
+
+  <!-- transition-property is the document-object property we listen for the changes on -->
+  <!-- transition-timing-function == transition-easing-function -->
+
+  <style>
+    body {
+      background: #fff;
+      margin: 30px;
+      margin-top: 10px;
+    }
+
+    #box {
+      width: 350px;
+      height: 350px;
+      border: 5px black solid;
+      overflow: hidden;
+      background: #f2f2f2;
+    }
+
+    #box img {
+      transform: translate3d(0, -350px, 0);
+      /* transition: all 0.5s ease-in; */
+      /* transition: all 0.5s cubic-bezier(0.31, 1.38, 0.55, -0.27); */
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0.31, 1.38, 0.55, -0.27);
+      transition-delay: 0.1s;
+    }
+
+    #box img:hover {
+      transform: translate3d(0, 0px, 0);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div id="box">
+      <img src="html5_slider.png" alt="HTML-5 slider" />
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
